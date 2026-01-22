@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
   <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white">
-  <div className="max-w-8xl mx-auto h-[100px] flex items-center justify-between px-4 md:px-6">
+  <div className="max-w-8xl mx-auto sm:py-0 py-4 sm:h-[100px] flex items-center justify-between px-4 md:px-6">
 
     {/* Logo */}
     <div className="flex items-center gap-3">
@@ -50,7 +50,7 @@ export default function Header() {
   {/* Mobile Menu */}
 {/* Mobile Menu */}
 {open && (
-  <div className="lg:hidden border-t bg-white px-6 py-4 space-y-4 text-[14px] text-[#2B2B2B]">
+  <div className="lg:hidden border-t border-[#E5E7EB] bg-white px-6 py-4 space-y-4 text-[14px] text-[#2B2B2B]">
     <a className="block" href="#about" onClick={() => setOpen(false)}>About</a>
     <a className="block" href="#services" onClick={() => setOpen(false)}>Services</a>
     <a className="block" href="#specialities" onClick={() => setOpen(false)}>Specialties</a>

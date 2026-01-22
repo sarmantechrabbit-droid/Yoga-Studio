@@ -7,7 +7,7 @@ const YogaHeroSection = () => {
       {/* Hero Container */}
       <div className="w-full max-w-8xl relative">
         {/* Main Card */}
-        <div className="relative rounded-3xl overflow-hidden">
+        <div className="relative sm:rounded-3xl overflow-hidden">
           {/* Background Video with Overlays */}
           <div className="absolute inset-0 overflow-hidden rounded-2xl">
             <video
@@ -25,19 +25,19 @@ const YogaHeroSection = () => {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:py-24 lg:py-32 min-h-[600px] lg:min-h-[700px]">
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-10 md:py-24 lg:py-32 min-h-[400px] sm:min-h-[600px] lg:min-h-[700px]">
             {/* Main Heading */}
             <h1
-              className="font-heading text-white text-center font-normal mb-6 leading-tight
+              className="font-heading text-white text-center font-normal mb-3 sm:mb-6 leading-tight max-w-3xl mx-auto
               text-4xl sm:text-5xl md:text-6xl lg:text-[88px] lg:leading-[105.6px]"
             >
               Welcome to Ripal Shah
-              <br />
+              
               Yoga Studio
             </h1>
 
             {/* Subheading */}
-            <p className="text-white text-center font-body font-medium mb-10 md:mb-12 px-2 sm:px-4 max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed">
+            <p className="text-white text-center font-body font-medium mb-3 sm:mb-10 md:mb-12 px-0 sm:px-4 max-w-3xl text-sm sm:text-lg md:text-xl leading-relaxed">
               A 360° holistic health approach through Yoga, Ayurveda & Nutrition
               —
               <br className="hidden sm:block" />
@@ -45,9 +45,9 @@ const YogaHeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 md:mb-16">
-              <button className="group font-body relative px-6 sm:px-8 py-3 sm:py-4 bg-[#E1916E] text-white font-[600] rounded-[10px] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 min-w-[180px] sm:min-w-[200px]">
-                <span className="text-[17px] leading-[25.5px] font-body">
+            <div className="flex flex-wrap  justify-center flex-row gap-2 sm:gap-6 mb-8 sm:mb-12 md:mb-16">
+              <button className="group font-body relative px-3 sm:px-8 py-2 sm:py-4 bg-[#E1916E] text-white font-semibold rounded-[10px] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2  sm:min-w-[200px]">
+                <span className="text-sm sm:text-[17px] leading-[25.5px] font-body">
                   Join Us Today
                 </span>
                 <svg
@@ -67,7 +67,7 @@ const YogaHeroSection = () => {
                 </svg>
               </button>
 
-              <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-[#565654] backdrop-blur-sm text-white font-semibold rounded-[10px] border-2 border-white/30 hover:bg-white/20 hover:border-white/50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 min-w-[180px] sm:min-w-[200px]">
+              <button className="group px-3 sm:px-8 py-2 sm:py-4 bg-[#565654] backdrop-blur-sm text-white font-semibold rounded-[10px] border-2 border-white/30 hover:bg-white/20 hover:border-white/50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 min-w-[180px] sm:min-w-[200px]">
                 <span className="text-sm sm:text-base md:text-lg font-body">
                   Explore Our Classes
                 </span>
