@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* For headings */
+.font-heading {
+  font-family: 'DM Serif Display', serif;
+}
+
+
+/* For body text or buttons */
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Reset SwiperSlide default styles */
+.swiper-slide {
+  all: unset;
+  display: block;
+}
+
+.swiper-slide {
+  width: auto !important;
+  height: auto !important;
+  flex-shrink: 0;
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
+
