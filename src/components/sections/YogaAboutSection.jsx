@@ -1,7 +1,8 @@
 import React from "react";
 import bg from "../../assets/image/about bg.png";
 import img from "../../assets/image/About Section.png";
-
+import { motion } from "framer-motion";
+import { container, fadeUp } from "../../assets/animation/motionAnimation";
 const YogaAboutSection = () => {
   // Left Flower SVG Component
   const LeftFlowerSVG = () => (
@@ -488,203 +489,245 @@ const YogaAboutSection = () => {
       text: "Mindful Practices",
     },
   ];
-
+  function Badge({ badge }) {
+    return (
+      <div
+        className="
+        inline-flex items-center gap-2
+        px-4 py-2.5
+        bg-[#FFF7EB]
+        text-gray-800
+        rounded-[111px]
+        text-sm font-medium
+        border border-[#E8DBC9]
+        hover:bg-orange-100
+        transition-colors
+      "
+      >
+        <span className="text-lg">{badge.icon}</span>
+        <span>{badge.text}</span>
+      </div>
+    );
+  }
   return (
-    <section id="about">
+    <section id="about" className="overflow-hidden">
       <div className="w-full bg-gradient-to-b from-white to-gray-50 py-4">
-      {/* ================= FEATURES SECTION ================= */}
-      <div className="relative mb-16 sm:mb-20">
-        {/* Background Image */}
-        <div
-          className="
+        {/* ================= FEATURES SECTION ================= */}
+        <div className="relative mb-4 sm:mb-20">
+          {/* Background Image */}
+          <div
+            className="
             absolute top-0 left-0 w-full
             h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px]
             bg-cover bg-top bg-no-repeat z-0
           "
-          style={{
-            backgroundImage: `
+            style={{
+              backgroundImage: `
               linear-gradient(180deg, rgba(255, 248, 240, 0) 0%, #FFF 100%), 
               url(${bg})
             `,
-          }}
-        />
+            }}
+          />
 
-        {/* Left Flower */}
-        <div className="
+          {/* Left Flower */}
+          <div className="
           absolute top-1/2 left-0 -translate-y-1/2
           w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32
           pointer-events-none
         ">
-          <LeftFlowerSVG className="w-full h-full" />
-        </div>
+            <LeftFlowerSVG className="w-full h-full" />
+          </div>
 
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="
               relative grid
               grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
               gap-6 sm:gap-8 lg:gap-6
               py-8
             "
-          >
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center p-6 transition-all duration-300"
-              >
-                <div className="text-gray-700 mb-4">
-                  {feature.icon}
-                </div>
+            >
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  className="flex flex-col items-center text-center p-6 transition-all duration-300"
+                >
+                  <div className="text-gray-700 mb-4">
+                    {feature.icon}
+                  </div>
 
-                <h3
-                  className="
+                  <h3
+                    className="
                     text-[#191919]
                     font-inter
                     text-[18px] sm:text-[20px]
                     font-semibold
                     leading-[28px] sm:leading-[30px]
                   "
-                >
-                  {feature.title}
-                </h3>
+                  >
+                    {feature.title}
+                  </h3>
 
-                <p
-                  className="
+                  <p
+                    className="
                     text-[#565656]
                     font-inter
                     text-[14px] sm:text-[16px]
                     font-medium
                     leading-[22px] sm:leading-[24px]
                   "
-                >
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+                  >
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
 
-        {/* Right Flower */}
-        <div className="
+          {/* Right Flower */}
+          <div className="
           absolute top-1/2 right-0 -translate-y-1/2 overflow-hidden
           w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32
           pointer-events-none
         ">
-          <RightFlowerSVG className="w-full h-full" />
+            <RightFlowerSVG className="w-full h-full" />
+          </div>
         </div>
-      </div>
 
-      {/* ================= ABOUT SECTION ================= */}
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Image */}
-          <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden">
-              <img
-                src={img}
-                alt="Yoga Practice"
-                className="
+        {/* ================= ABOUT SECTION ================= */}
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-16 items-center">
+            {/* Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
+                <img
+                  src={img}
+                  alt="Yoga Practice"
+                  className="
                   w-full
                   h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px]
                   object-cover
                 "
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+
+              {/* Decorative Blurs */}
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 sm:w-32 sm:h-32 bg-green-100 rounded-full blur-3xl opacity-50" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 sm:w-32 sm:h-32 bg-orange-100 rounded-full blur-3xl opacity-50" />
             </div>
 
-            {/* Decorative Blurs */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 sm:w-32 sm:h-32 bg-green-100 rounded-full blur-3xl opacity-50" />
-            <div className="absolute -top-6 -left-6 w-24 h-24 sm:w-32 sm:h-32 bg-orange-100 rounded-full blur-3xl opacity-50" />
-          </div>
-
-          {/* Content */}
-          <div className="space-y-6">
-            <h2
-              className="
+            {/* Content */}
+            <div className="space-y-3 sm:space-y-6">
+              <motion.h2
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="
                 text-[#1F1F1F]
                 font-heading
                 text-[36px] sm:text-[48px] md:text-[60px] lg:text-[70px]
                 font-normal
                 leading-[44px] sm:leading-[58px] md:leading-[74px] lg:leading-[91.052px]
               "
-            >
-              About Ripal Shah
-              <br />
-              Yoga Studio
-            </h2>
+              >
+                About Ripal Shah
+                <br />
+                Yoga Studio
+              </motion.h2>
 
-            <p
-              className="
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="
                 text-[#333]
                 font-body
                 text-[15px] sm:text-[17px] md:text-[19px]
                 font-normal
                 leading-[24px] sm:leading-[27px] md:leading-[30.128px]
               "
-            >
-              Ripal Shah is a Certified Ayurveda & Yoga Trainer and Nutritionist
-              dedicated to holistic healing. Her journey began with a deep belief
-              that true wellness comes from balance — of body, mind, and breath.
-              Through personalized yoga, pranayama, meditation, and Ayurvedic
-              guidance, she helps individuals breathe through stress, heal
-              naturally, and live mindfully.
-            </p>
+              >
+                Ripal Shah is a Certified Ayurveda & Yoga Trainer and Nutritionist
+                dedicated to holistic healing. Her journey began with a deep belief
+                that true wellness comes from balance — of body, mind, and breath.
+                Through personalized yoga, pranayama, meditation, and Ayurvedic
+                guidance, she helps individuals breathe through stress, heal
+                naturally, and live mindfully.
+              </motion.p>
 
-            {/* Badges */}
-          <div className="pt-4 space-y-2">
-  {/* Row 1 */}
-  <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-    {badges.slice(0, 2).map((badge, index) => (
-      <div
-        key={index}
-        className="
-          inline-flex items-center gap-2
-          px-4 py-2.5
-          bg-[#FFF7EB]
-          text-gray-800
-          rounded-[111px]
-          text-sm font-medium
-          border border-[#E8DBC9]
-          hover:bg-orange-100
-          transition-colors
-        "
-      >
-        <span className="text-lg">{badge.icon}</span>
-        <span>{badge.text}</span>
-      </div>
-    ))}
-  </div>
+              {/* Badges */}
+              <div className="relative w-full overflow-hidden pt-4 lg:overflow-visible">
 
-  {/* Row 2 */}
-  <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-    {badges.slice(2, 5).map((badge, index) => (
-      <div
-        key={index}
-        className="
-          inline-flex items-center gap-2
-          px-4 py-2.5
-          bg-[#FFF7EB]
-          text-gray-800
-          rounded-[111px]
-          text-sm font-medium
-          border border-[#E8DBC9]
-          hover:bg-orange-100
-          transition-colors
-        "
-      >
-        <span className="text-lg">{badge.icon}</span>
-        <span>{badge.text}</span>
-      </div>
-    ))}
-  </div>
-</div>
+                {/* LEFT GRADIENT */}
+                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white to-transparent lg:hidden" />
 
+                {/* RIGHT GRADIENT */}
+                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white to-transparent lg:hidden" />
+
+                {/* MOBILE MARQUEE */}
+                <motion.div
+                  className="flex gap-3 w-max lg:hidden"
+                  animate={{
+                    x: ["0%", "-50%"],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20,
+                    ease: "linear",
+                  }}
+                >
+                  {/* DUPLICATE CONTENT FOR SEAMLESS LOOP */}
+                  {[...badges, ...badges].map((badge, index) => (
+                    <div
+                      key={index}
+                      className="
+              inline-flex items-center gap-2
+              px-4 py-2.5
+              bg-[#FFF7EB]
+              text-gray-800
+              rounded-[111px]
+              text-sm font-medium
+              border border-[#E8DBC9]
+              whitespace-nowrap
+            "
+                    >
+                      <span className="text-lg">{badge.icon}</span>
+                      <span>{badge.text}</span>
+                    </div>
+                  ))}
+                </motion.div>
+
+                {/* DESKTOP (YOUR ORIGINAL GRID) */}
+                <div className="hidden lg:block space-y-2">
+                  <div className="flex flex-wrap gap-3 justify-start">
+                    {badges.slice(0, 2).map((badge, index) => (
+                      <Badge key={index} badge={badge} />
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 justify-start">
+                    {badges.slice(2, 5).map((badge, index) => (
+                      <Badge key={index} badge={badge} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </section>
+    </section >
   );
 };
 

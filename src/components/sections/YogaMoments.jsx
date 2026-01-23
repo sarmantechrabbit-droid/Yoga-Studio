@@ -5,16 +5,16 @@ import img3 from '../../assets/image/footer3.png'
 import img4 from '../../assets/image/footer4.png'
 import img5 from '../../assets/image/footer5.png'
 import img6 from '../../assets/image/footer6.png'
-
+import { motion } from "framer-motion";
 
 const images = [
- img1,
+  img1,
   img2,
- img3,
+  img3,
   img4,
   img5,
- img6,
- img1,
+  img6,
+  img1,
   img2,
 ];
 
@@ -23,7 +23,10 @@ export default function YogaMoments() {
     <section className="w-full bg-[#E1916E] py-8 px-4 rounded-t-[32px]">
       <div className="max-w-7xl mx-auto bg-peach rounded-xl ">
         {/* Heading */}
-        <div className="text-center max-w-[520px] mx-auto">
+        <motion.div initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }} className="text-center max-w-[520px] mx-auto">
           <h2 className="font-heading text-white text-[26px] sm:text-[32px] leading-snug">
             Share your Yoogy moments
             <br />
@@ -36,10 +39,13 @@ export default function YogaMoments() {
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
             libero vitae erat.
           </p>
-        </div>
+        </motion.div>
 
         {/* Image Grid */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <motion.div initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }} className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((src, index) => (
             <div
               key={index}
@@ -52,10 +58,10 @@ export default function YogaMoments() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-   
+
     </section>
   );
 }

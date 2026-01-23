@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
-
+import { motion } from "framer-motion";
 import img1 from "../../assets/image/yogadog1.png";
 import img2 from "../../assets/image/yogadog2.png";
 import yoga3 from "../../assets/image/yogadog3.png";
@@ -11,10 +11,17 @@ import img3 from "../../assets/image/Content1.png";
 import content2 from "../../assets/image/Content2.png";
 import content3 from "../../assets/image/Content 3.png";
 import content4 from "../../assets/image/Content 4.png";
+import { fadeUp } from "../../assets/animation/motionAnimation";
+
+
+
 
 export default function Specialities() {
   return (
-    <section id="specialities" className="max-w-[1400px] mx-auto px-6">
+    <motion.section id="specialities" className="max-w-[1400px] mx-auto px-6 py-10 sm:py-16 " initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-100px" }}>
       {/* ================= TOP CONTENT ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
@@ -26,7 +33,7 @@ export default function Specialities() {
     text-center          
     uppercase             
     tracking-[3.789px]    
-    text-[18px] sm:text-[18px] lg:text-[20px] 
+    text-[16px] sm:text-[18px] lg:text-[20px] 
     leading-[32.842px]   
     w-full max-w-[238px]  
     mx-auto
@@ -51,8 +58,8 @@ export default function Specialities() {
             Our Specialities
           </p> */}
 
-          <h2 className="text-[42px] leading-[52px]  font-heading  text-[#1F1F1F] mb-6">
-            Classes designed for all <br /> experience levels
+          <h2 className="sm:text-[42px] text-[36px] sm:leading-[52px] leading-[42px]  font-heading  text-[#1F1F1F] mb-3 sm:mb-6">
+            Classes designed for all <br className="sm:block hidden" /> experience levels
           </h2>
 
           <p className="text-[#6B6B6B] font-body text-[16px] leading-[26px] max-w-md">
@@ -113,55 +120,55 @@ export default function Specialities() {
           </button>
         </div>
 
-      <Swiper
-  modules={[Navigation]}
-  navigation={{
-    prevEl: ".prev-btn",
-    nextEl: ".next-btn",
-  }}
-  slidesPerView={1} // default for mobile
-  spaceBetween={20} // general spacing
-  breakpoints={{
-    640: { slidesPerView: 1, spaceBetween: 20 }, // sm
-    768: { slidesPerView: 1, spaceBetween: 30 }, // md / tablet
-    1024: { slidesPerView: 1, spaceBetween: 40 }, // lg / desktop
-    1280: { slidesPerView: 1, spaceBetween: 40 }, // xl / large screens
-  }}
->
-  {/* SLIDE 1 */}
-  <SwiperSlide>
-    <div className="flex flex-col md:flex-row justify-center items-center">
-      {/* img1 */}
-      <img src={img1} className="rounded-3xl object-cover w-full md:w-auto" alt="" />
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            prevEl: ".prev-btn",
+            nextEl: ".next-btn",
+          }}
+          slidesPerView={1} // default for mobile
+          spaceBetween={20} // general spacing
+          breakpoints={{
+            640: { slidesPerView: 1, spaceBetween: 20 }, // sm
+            768: { slidesPerView: 1, spaceBetween: 30 }, // md / tablet
+            1024: { slidesPerView: 1, spaceBetween: 40 }, // lg / desktop
+            1280: { slidesPerView: 1, spaceBetween: 40 }, // xl / large screens
+          }}
+        >
+          {/* SLIDE 1 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              {/* img1 */}
+              <img src={img1} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto" alt="" />
 
-      {/* img2 → no gap with img1 */}
-      <img src={img3} className="rounded-3xl object-cover w-full md:w-auto md:-ml-1" alt="" />
+              {/* img2 → no gap with img1 */}
+              <img src={img3} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:-ml-1" alt="" />
 
-      {/* img3 → gap from img2 */}
-      <img src={img2} className="rounded-3xl object-cover w-full md:w-auto md:ml-4" alt="" />
-    </div>
-  </SwiperSlide>
+              {/* img3 → gap from img2 */}
+              <img src={img2} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4" alt="" />
+            </div>
+          </SwiperSlide>
 
-  {/* SLIDE 2 */}
-  <SwiperSlide>
-    <div className="flex flex-col md:flex-row justify-center items-center">
-      <img src={yoga3} className="rounded-3xl object-cover w-full md:w-auto" alt="" />
-      <img src={content2} className="rounded-3xl object-cover w-full md:w-auto md:-ml-1" alt="" />
-      <img src={yoga4} className="rounded-3xl object-cover w-full md:w-auto md:ml-4" alt="" />
-    </div>
-  </SwiperSlide>
+          {/* SLIDE 2 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <img src={yoga3} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto" alt="" />
+              <img src={content2} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:-ml-1" alt="" />
+              <img src={yoga4} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:ml-4" alt="" />
+            </div>
+          </SwiperSlide>
 
-  {/* SLIDE 3 */}
-  <SwiperSlide>
-    <div className="flex flex-col md:flex-row justify-center items-center">
-      <img src={content3} className="rounded-3xl object-cover w-full md:w-auto" alt="" />
-      <img src={yoga5} className="rounded-3xl object-cover w-full md:w-auto md:-ml-1" alt="" />
-      <img src={content4} className="rounded-3xl object-cover w-full md:w-auto md:ml-4" alt="" />
-    </div>
-  </SwiperSlide>
-</Swiper>
+          {/* SLIDE 3 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <img src={content3} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto" alt="" />
+              <img src={yoga5} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1" alt="" />
+              <img src={content4} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:ml-4" alt="" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

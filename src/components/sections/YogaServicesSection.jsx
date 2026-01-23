@@ -1,6 +1,7 @@
 import React from "react";
 import servicebg from "../../assets/image/servicebg.png";
-
+import { motion } from "framer-motion";
+import { container, fadeUp, sectionVariant, cardVariant, scaleFade } from "../../assets/animation/motionAnimation";
 const YogaServicesSection = () => {
   const services = [
     {
@@ -102,13 +103,20 @@ const YogaServicesSection = () => {
 
   return (
     <section id="services">
-    <div className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-   <div className="text-center mb-20 md:mb-28 lg:mb-[150px]">
-  {/* Top label */}
-  <div className="inline-block mb-4">
-    <p className="
+      <div className="w-full bg-white py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <motion.div variants={sectionVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} className="max-w-7xl mx-auto">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }} className="text-center mb-10 sm:mb-20 md:mb-28 lg:mb-[150px]">
+            {/* Top label */}
+            <div className="inline-block mb-4">
+              <p className="
       text-[#E1916E]
       font-serif font-normal uppercase text-center
       tracking-[2px] sm:tracking-[3.789px]
@@ -116,250 +124,252 @@ const YogaServicesSection = () => {
       leading-[22px] sm:leading-[28px] lg:leading-[32.842px]
       mx-auto
     ">
-      Our Services
-    </p>
+                Our Services
+              </p>
 
-    <svg
-      className="mx-auto mt-2 w-[120px] sm:w-[160px] lg:w-[177px]"
-      height="6"
-      viewBox="0 0 177 6"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect height="5.05263" width="176.842" fill="#E1916E" />
-    </svg>
-  </div>
+              <svg
+                className="mx-auto mt-2 w-[120px] sm:w-[160px] lg:w-[177px]"
+                height="6"
+                viewBox="0 0 177 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect height="5.05263" width="176.842" fill="#E1916E" />
+              </svg>
+            </div>
 
-  {/* Title + Description */}
-  <div className="flex flex-col items-center space-y-4 sm:space-y-6">
-    <h2
-      className="
+            {/* Title + Description */}
+            <div className="flex flex-col items-center space-y-4 sm:space-y-6">
+              <h2
+                className="
         text-[#505050] font-serif font-normal capitalize text-center
         text-[28px] sm:text-[38px] lg:text-[50.526px]
         leading-[36px] sm:leading-[48px] lg:leading-[63.158px]
         max-w-full sm:max-w-[520px] lg:max-w-[602.723px]
       "
-    >
-      We're The Ones That Care
-    </h2>
+              >
+                We're The Ones That Care
+              </h2>
 
-    <p
-      className="
+              <p
+                className="
         text-[#333] font-sans font-normal capitalize text-center
         text-[14px] sm:text-[16px] lg:text-[19px]
         leading-[22px] sm:leading-[26px] lg:leading-[30.316px]
         max-w-full sm:max-w-[720px] lg:max-w-[964.067px]
       "
-    >
-      Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-      Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
-      Enim Ad Minim Veniam.
-    </p>
-  </div>
-</div>
+              >
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
+                Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
+                Enim Ad Minim Veniam.
+              </p>
+            </div>
+          </motion.div>
 
 
-        {/* Services Grid with Center Image */}
-        {/* Services Grid with Center Image */}
-        <div className="relative max-w-7xl mx-auto mb-12">
-          {/* Center Background Image — DESKTOP/TABLET ONLY */}
-          <div
-            className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0
+          {/* Services Grid with Center Image */}
+          {/* Services Grid with Center Image */}
+          <motion.div
+            variants={scaleFade} className="relative max-w-7xl mx-auto mb-6 sm:mb-12">
+            {/* Center Background Image — DESKTOP/TABLET ONLY */}
+            <div
+              className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0
     w-[571px] h-[593px]"
-          >
-            <img
-              src={servicebg}
-              alt="Yoga Pose"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Cards */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2
-  gap-x-16 gap-y-20 relative z-10"
-          >
-            {/* Top Left */}
-            <div className="flex justify-center sm:justify-start">
-              <div
-                className="bg-white p-6 rounded-2xl
-      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
-      transition-shadow duration-300
-      w-full max-w-sm flex flex-col items-center text-center"
-              >
-                <div className="text-[#D4A574] mb-4">{services[0].icon}</div>
-                <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
-                  {services[0].title}
-                </h3>
-                <p className="text-sm font-body text-gray-500">
-                  {services[0].description}
-                </p>
-              </div>
-            </div>
-
-            {/* Top Right */}
-            <div className="flex justify-center sm:justify-end">
-              <div
-                className="bg-white p-6 rounded-2xl
-      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
-      transition-shadow duration-300
-      w-full max-w-sm flex flex-col items-center text-center"
-              >
-                <div className="text-[#D4A574] mb-4">{services[1].icon}</div>
-                <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
-                  {services[1].title}
-                </h3>
-                <p className="text-sm font-body text-gray-500">
-                  {services[1].description}
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom Left */}
-            <div className="flex justify-center sm:justify-start">
-              <div
-                className="bg-white p-6 rounded-2xl
-      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
-      transition-shadow duration-300
-      w-full max-w-sm flex flex-col items-center text-center"
-              >
-                <div className="text-[#D4A574] mb-4">{services[2].icon}</div>
-                <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
-                  {services[2].title}
-                </h3>
-                <p className="text-sm font-body text-gray-500">
-                  {services[2].description}
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom Right */}
-            <div className="flex justify-center sm:justify-end">
-              <div
-                className="bg-white p-6 rounded-2xl
-      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
-      transition-shadow duration-300
-      w-full max-w-sm flex flex-col items-center text-center"
-              >
-                <div className="text-[#D4A574] mb-4">{services[3].icon}</div>
-                <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
-                  {services[3].title}
-                </h3>
-                <p className="text-sm font-body text-gray-500">
-                  {services[3].description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="relative text-center mt-16 sm:mt-24 lg:mt-40">
-          {/* Left Flower SVG */}
-          <div className="absolute top-[-100px] left-0 sm:left-20 lg:left-5 top-1/2 -translate-y-1/2 hidden sm:block">
-            <svg
-              height="66"
-              width="66"
-              fill="none"
-              viewBox="0 0 66 66"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <rect
-                height="65.6842"
-                width="65.6842"
-                fill="url(#pattern0_8_1259)"
+              <img
+                src={servicebg}
+                alt="Yoga Pose"
+                className="w-full h-full object-cover"
               />
-              <defs>
-                <pattern
-                  height="1"
-                  id="pattern0_8_1259"
-                  width="1"
-                  patternContentUnits="objectBoundingBox"
+            </div>
+
+            {/* Cards */}
+            <motion.div
+              variants={sectionVariant}
+              className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2
+  gap-x-16 gap-y-10 sm:gap-y-20 relative z-10"
+            >
+              {/* Top Left */}
+              <div className="flex justify-center sm:justify-start">
+                <div
+                  className="bg-white p-6 rounded-2xl
+      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
+      transition-shadow duration-300
+      w-full max-w-sm flex flex-col items-center text-center"
                 >
-                  <use
-                    transform="scale(0.0133333)"
-                    xlinkHref="#image0_8_1259"
+                  <div className="text-[#D4A574] mb-4">{services[0].icon}</div>
+                  <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
+                    {services[0].title}
+                  </h3>
+                  <p className="text-sm font-body text-gray-500">
+                    {services[0].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Top Right */}
+              <div className="flex justify-center sm:justify-end">
+                <div
+                  className="bg-white p-6 rounded-2xl
+      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
+      transition-shadow duration-300
+      w-full max-w-sm flex flex-col items-center text-center"
+                >
+                  <div className="text-[#D4A574] mb-4">{services[1].icon}</div>
+                  <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
+                    {services[1].title}
+                  </h3>
+                  <p className="text-sm font-body text-gray-500">
+                    {services[1].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom Left */}
+              <motion.div variants={cardVariant} className="flex justify-center sm:justify-start">
+                <div
+                  className="bg-white p-6 rounded-2xl
+      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
+      transition-shadow duration-300
+      w-full max-w-sm flex flex-col items-center text-center"
+                >
+                  <div className="text-[#D4A574] mb-4">{services[2].icon}</div>
+                  <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
+                    {services[2].title}
+                  </h3>
+                  <p className="text-sm font-body text-gray-500">
+                    {services[2].description}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Bottom Right */}
+              <motion.div variants={cardVariant} className="flex justify-center sm:justify-end">
+                <div
+                  className="bg-white p-6 rounded-2xl
+      shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+      hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
+      transition-shadow duration-300
+      w-full max-w-sm flex flex-col items-center text-center"
+                >
+                  <div className="text-[#D4A574] mb-4">{services[3].icon}</div>
+                  <h3 className="text-xl font-heading font-normal text-gray-900 mb-2">
+                    {services[3].title}
+                  </h3>
+                  <p className="text-sm font-body text-gray-500">
+                    {services[3].description}
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* CTA Button */}
+          <div className="relative text-center mt-8 sm:mt-24 lg:mt-40">
+            {/* Left Flower SVG */}
+            <div className="absolute top-[-100px] left-0 sm:left-20 lg:left-5 top-1/2 -translate-y-1/2 hidden sm:block">
+              <svg
+                height="66"
+                width="66"
+                fill="none"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="65.6842"
+                  width="65.6842"
+                  fill="url(#pattern0_8_1259)"
+                />
+                <defs>
+                  <pattern
+                    height="1"
+                    id="pattern0_8_1259"
+                    width="1"
+                    patternContentUnits="objectBoundingBox"
+                  >
+                    <use
+                      transform="scale(0.0133333)"
+                      xlinkHref="#image0_8_1259"
+                    />
+                  </pattern>
+                  <image
+                    height="75"
+                    id="image0_8_1259"
+                    width="75"
+                    preserveAspectRatio="none"
+                    xlinkHref="data:image/png;base64,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"
                   />
-                </pattern>
-                <image
-                  height="75"
-                  id="image0_8_1259"
-                  width="75"
-                  preserveAspectRatio="none"
-                  xlinkHref="data:image/png;base64,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"
-                />
-              </defs>
-            </svg>
-          </div>
+                </defs>
+              </svg>
+            </div>
 
-          {/* Right Circle SVGs */}
-          <div className="absolute right-0  top-[-40px] sm:right-20 lg:right-32 top-1/2 -translate-y-1/2 hidden sm:block">
-            <svg
-              height="58"
-              width="58"
-              fill="none"
-              viewBox="0 0 58 58"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                height="57.5874"
-                width="57.5874"
-                fill="url(#pattern0_8_1260)"
-              />
-              <defs>
-                <pattern
-                  height="1"
-                  id="pattern0_8_1260"
-                  width="1"
-                  patternContentUnits="objectBoundingBox"
-                >
-                  <use transform="scale(0.04)" xlinkHref="#image0_8_1260" />
-                </pattern>
-                <image
-                  height="25"
-                  id="image0_8_1260"
-                  width="25"
-                  preserveAspectRatio="none"
-                  xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGQSURBVHgBtZa/T8JAFMe/766SyCiO4Mgqo7g6EhhMdPZ/YKsxaYgxcWB19i9goOimK6uO7SorjjWRts+7Ig0olJ/3GZq7a+597957d+8IS+CukwfkiWodgWlfDeXHP+IBmD1w7oPO7WGWDVpovOOUIWUdRGUsJe4jtNxFYjR35cK6QIxTrA271LjpZYpw566Avaip3FLApjAPQFGbGk4wGRI7FdAQFcGyOT2UikBGV1sLTAlxt3U5I8Juq7pagNdBnPGTU05FlHQdJghlYpdULMqw4iZMEQpbwAo3SNU1oFFFqGCXYBJJJaECfgCTkCjqwOdhFM4LGIcC5S4ewiQxf+mYeDAJwVPZFfswiYx8LfKumgFMoEJBNccX4ytZvMAI0tXf3+z6ft15AjD7VLf7qUiyG5l7wK7cphccyce0OyP+fF9EONKX5eYHVAuMZHu63v+v8dtUSOUivYO/D4rFrxX3VtUCrq4oFqjz1qP69dwEoqyZycuFcseIo4rqHib1e2KU+VO5xoO03qhmZ561HztqlGXd/HPtAAAAAElFTkSuQmCC"
+            {/* Right Circle SVGs */}
+            <div className="absolute right-0  top-[-40px] sm:right-20 lg:right-32 top-1/2 -translate-y-1/2 hidden sm:block">
+              <svg
+                height="58"
+                width="58"
+                fill="none"
+                viewBox="0 0 58 58"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="57.5874"
+                  width="57.5874"
+                  fill="url(#pattern0_8_1260)"
                 />
-              </defs>
-            </svg>
-          </div>
-          <div className="absolute right-0  top-[-90px] sm:right-20 lg:right-5 top-1/2 -translate-y-1/2 hidden sm:block">
-            <svg
-              height="29"
-              width="29"
-              fill="none"
-              viewBox="0 0 29 29"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect height="28.8" width="28.8" fill="url(#pattern0_8_1258)" />
-              <defs>
-                <pattern
-                  height="1"
-                  id="pattern0_8_1258"
-                  width="1"
-                  patternContentUnits="objectBoundingBox"
-                >
-                  <use transform="scale(0.04)" xlinkHref="#image0_8_1258" />
-                </pattern>
-                <image
-                  height="25"
-                  id="image0_8_1258"
-                  width="25"
-                  preserveAspectRatio="none"
-                  xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGQSURBVHgBtZa/T8JAFMe/766SyCiO4Mgqo7g6EhhMdPZ/YKsxaYgxcWB19i9goOimK6uO7SorjjWRts+7Ig0olJ/3GZq7a+597957d+8IS+CukwfkiWodgWlfDeXHP+IBmD1w7oPO7WGWDVpovOOUIWUdRGUsJe4jtNxFYjR35cK6QIxTrA271LjpZYpw566Avaip3FLApjAPQFGbGk4wGRI7FdAQFcGyOT2UikBGV1sLTAlxt3U5I8Juq7pagNdBnPGTU05FlHQdJghlYpdULMqw4iZMEQpbwAo3SNU1oFFFqGCXYBJJJaECfgCTkCjqwOdhFM4LGIcC5S4ewiQxf+mYeDAJwVPZFfswiYx8LfKumgFMoEJBNccX4ytZvMAI0tXf3+z6ft15AjD7VLf7qUiyG5l7wK7cphccyce0OyP+fF9EONKX5eYHVAuMZHu63v+v8dtUSOUivYO/D4rFrxX3VtUCrq4oFqjz1qP69dwEoqyZycuFcseIo4rqHib1e2KU+VO5xoO03qhmZ561HztqlGXd/HPtAAAAAElFTkSuQmCC"
-                />
-              </defs>
-            </svg>
-          </div>
+                <defs>
+                  <pattern
+                    height="1"
+                    id="pattern0_8_1260"
+                    width="1"
+                    patternContentUnits="objectBoundingBox"
+                  >
+                    <use transform="scale(0.04)" xlinkHref="#image0_8_1260" />
+                  </pattern>
+                  <image
+                    height="25"
+                    id="image0_8_1260"
+                    width="25"
+                    preserveAspectRatio="none"
+                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGQSURBVHgBtZa/T8JAFMe/766SyCiO4Mgqo7g6EhhMdPZ/YKsxaYgxcWB19i9goOimK6uO7SorjjWRts+7Ig0olJ/3GZq7a+597957d+8IS+CukwfkiWodgWlfDeXHP+IBmD1w7oPO7WGWDVpovOOUIWUdRGUsJe4jtNxFYjR35cK6QIxTrA271LjpZYpw566Avaip3FLApjAPQFGbGk4wGRI7FdAQFcGyOT2UikBGV1sLTAlxt3U5I8Juq7pagNdBnPGTU05FlHQdJghlYpdULMqw4iZMEQpbwAo3SNU1oFFFqGCXYBJJJaECfgCTkCjqwOdhFM4LGIcC5S4ewiQxf+mYeDAJwVPZFfswiYx8LfKumgFMoEJBNccX4ytZvMAI0tXf3+z6ft15AjD7VLf7qUiyG5l7wK7cphccyce0OyP+fF9EONKX5eYHVAuMZHu63v+v8dtUSOUivYO/D4rFrxX3VtUCrq4oFqjz1qP69dwEoqyZycuFcseIo4rqHib1e2KU+VO5xoO03qhmZ561HztqlGXd/HPtAAAAAElFTkSuQmCC"
+                  />
+                </defs>
+              </svg>
+            </div>
+            <div className="absolute right-0  top-[-90px] sm:right-20 lg:right-5 top-1/2 -translate-y-1/2 hidden sm:block">
+              <svg
+                height="29"
+                width="29"
+                fill="none"
+                viewBox="0 0 29 29"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect height="28.8" width="28.8" fill="url(#pattern0_8_1258)" />
+                <defs>
+                  <pattern
+                    height="1"
+                    id="pattern0_8_1258"
+                    width="1"
+                    patternContentUnits="objectBoundingBox"
+                  >
+                    <use transform="scale(0.04)" xlinkHref="#image0_8_1258" />
+                  </pattern>
+                  <image
+                    height="25"
+                    id="image0_8_1258"
+                    width="25"
+                    preserveAspectRatio="none"
+                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGQSURBVHgBtZa/T8JAFMe/766SyCiO4Mgqo7g6EhhMdPZ/YKsxaYgxcWB19i9goOimK6uO7SorjjWRts+7Ig0olJ/3GZq7a+597957d+8IS+CukwfkiWodgWlfDeXHP+IBmD1w7oPO7WGWDVpovOOUIWUdRGUsJe4jtNxFYjR35cK6QIxTrA271LjpZYpw566Avaip3FLApjAPQFGbGk4wGRI7FdAQFcGyOT2UikBGV1sLTAlxt3U5I8Juq7pagNdBnPGTU05FlHQdJghlYpdULMqw4iZMEQpbwAo3SNU1oFFFqGCXYBJJJaECfgCTkCjqwOdhFM4LGIcC5S4ewiQxf+mYeDAJwVPZFfswiYx8LfKumgFMoEJBNccX4ytZvMAI0tXf3+z6ft15AjD7VLf7qUiyG5l7wK7cphccyce0OyP+fF9EONKX5eYHVAuMZHu63v+v8dtUSOUivYO/D4rFrxX3VtUCrq4oFqjz1qP69dwEoqyZycuFcseIo4rqHib1e2KU+VO5xoO03qhmZ561HztqlGXd/HPtAAAAAElFTkSuQmCC"
+                  />
+                </defs>
+              </svg>
+            </div>
 
-          <button
-            className="
+            <button
+              className="
           font-body
           inline-flex
           items-center
@@ -383,26 +393,26 @@ const YogaServicesSection = () => {
           relative
           z-10
         "
-          >
-            <span className="text-sm uppercase tracking-wide">
-              Start Free Trial
-            </span>
-            <svg
-              height="11"
-              width="15"
-              fill="none"
-              viewBox="0 0 15 11"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M10.0995 0.161048C9.99221 0.05371 9.86535 4.1008e-05 9.71898 4.1008e-05C9.57261 4.1008e-05 9.44576 0.05371 9.33842 0.161048C9.23108 0.258628 9.17741 0.380604 9.17741 0.526974C9.17741 0.673344 9.23108 0.800199 9.33842 0.907537L13.1733 4.74244H0.526933C0.380563 4.74244 0.256148 4.79367 0.153689 4.89612C0.0512296 4.99858 0 5.123 0 5.26937C0 5.41574 0.0512296 5.54015 0.153689 5.64261C0.256148 5.74507 0.380563 5.7963 0.526933 5.7963H13.1733L9.33842 9.6312C9.23108 9.72878 9.17741 9.8532 9.17741 10.0044C9.17741 10.1557 9.23108 10.2801 9.33842 10.3777C9.44576 10.485 9.57261 10.5387 9.71898 10.5387C9.86535 10.5387 9.99221 10.485 10.0995 10.3777L14.8273 5.64993C14.9346 5.54259 14.9883 5.41574 14.9883 5.26937C14.9883 5.123 14.9346 4.99614 14.8273 4.88881L10.0995 0.161048Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-        </div>
+              <span className="text-sm uppercase tracking-wide">
+                Start Free Trial
+              </span>
+              <svg
+                height="11"
+                width="15"
+                fill="none"
+                viewBox="0 0 15 11"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.0995 0.161048C9.99221 0.05371 9.86535 4.1008e-05 9.71898 4.1008e-05C9.57261 4.1008e-05 9.44576 0.05371 9.33842 0.161048C9.23108 0.258628 9.17741 0.380604 9.17741 0.526974C9.17741 0.673344 9.23108 0.800199 9.33842 0.907537L13.1733 4.74244H0.526933C0.380563 4.74244 0.256148 4.79367 0.153689 4.89612C0.0512296 4.99858 0 5.123 0 5.26937C0 5.41574 0.0512296 5.54015 0.153689 5.64261C0.256148 5.74507 0.380563 5.7963 0.526933 5.7963H13.1733L9.33842 9.6312C9.23108 9.72878 9.17741 9.8532 9.17741 10.0044C9.17741 10.1557 9.23108 10.2801 9.33842 10.3777C9.44576 10.485 9.57261 10.5387 9.71898 10.5387C9.86535 10.5387 9.99221 10.485 10.0995 10.3777L14.8273 5.64993C14.9346 5.54259 14.9883 5.41574 14.9883 5.26937C14.9883 5.123 14.9346 4.99614 14.8273 4.88881L10.0995 0.161048Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </motion.div>
       </div>
-    </div>
     </section>
   );
 };

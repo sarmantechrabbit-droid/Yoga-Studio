@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 const faqsLeft = [
   {
     question: "What should I bring?",
@@ -49,12 +49,15 @@ const faqsRight = [
 export default function FaqSection() {
   return (
     <section className="w-full bg-white px-4 sm:px-6 lg:px-0">
-      <div className="max-w-[1200px] mx-auto py-16 sm:py-20">
+      <motion.div initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }} className="max-w-[1200px] mx-auto py-0 sm:py-20">
         {/* Header */}
-        <div className="text-center mb-14">
-                   <div className="inline-block mb-4">
-  <p
-  className="
+        <div className="text-center mb-4 sm:mb-14">
+          <div className="inline-block mb-0 sm:mb-4">
+            <p
+              className="
     text-[#E1916E]       
    font-heading        
     text-center          
@@ -65,21 +68,21 @@ export default function FaqSection() {
     w-full max-w-[238px]  
     mx-auto
   "
->
-  FAQ’s
-</p>
+            >
+              FAQ’s
+            </p>
 
-    {/* SVG — UNCHANGED */}
-<svg height="4" width="90" fill="none" viewBox="0 0 90 4" xmlns="http://www.w3.org/2000/svg">
-	<rect height="3.12447" width="89.5682" fill="#E1916E" transform="matrix(1 0 0 -1 0 3.12451)"/>
-</svg>
-  </div>
+            {/* SVG — UNCHANGED */}
+            <svg height="4" width="90" fill="none" viewBox="0 0 90 4" xmlns="http://www.w3.org/2000/svg">
+              <rect height="3.12447" width="89.5682" fill="#E1916E" transform="matrix(1 0 0 -1 0 3.12451)" />
+            </svg>
+          </div>
           {/* <span className="inline-block text-[13px] tracking-widest text-accent uppercase">
             FAQ’s
             <span className="block w-6 h-[2px] bg-accent mx-auto mt-2" />
           </span> */}
 
-          <h2 className="mt-6 font-heading text-textPrimary text-[34px] sm:text-[42px] lg:text-[48px]">
+          <h2 className="mt-2 sm:mt-6 font-heading text-textPrimary text-[34px] sm:text-[42px] lg:text-[48px]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -98,7 +101,7 @@ export default function FaqSection() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="w-full h-[3px] bg-accent mt-10" />
     </section>
@@ -110,32 +113,31 @@ function FaqRow({ question, answer }) {
 
   return (
     <section id="faqs">
-    <div
-      className="border-b border-borderLight py-5 cursor-pointer"
-      onClick={() => setOpen(!open)}
-    >
-      {/* Question Row */}
-      <div className="flex items-center justify-between">
-        <p className="font-heading text-[18px] sm:text-[19px] text-textPrimary">
-          {question}
-        </p>
-
-        <span className="text-[24px] font-light text-textPrimary">
-          {open ? "−" : "+"}
-        </span>
-      </div>
-
-      {/* Answer */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
-        }`}
+        className="border-b border-borderLight py-3 sm:py-5 cursor-pointer"
+        onClick={() => setOpen(!open)}
       >
-        <p className="text-[15px] text-gray-600 leading-relaxed pr-6">
-          {answer}
-        </p>
+        {/* Question Row */}
+        <div className="flex items-center justify-between">
+          <p className="font-heading text-[18px] sm:text-[19px] text-textPrimary">
+            {question}
+          </p>
+
+          <span className="text-[24px] font-light text-textPrimary">
+            {open ? "−" : "+"}
+          </span>
+        </div>
+
+        {/* Answer */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
+            }`}
+        >
+          <p className="text-[15px] text-gray-600 leading-relaxed pr-6">
+            {answer}
+          </p>
+        </div>
       </div>
-    </div>
     </section>
   );
 }

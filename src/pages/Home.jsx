@@ -14,17 +14,17 @@ import Footer from '../components/sections/Footer'
 function Home() {
   return (
     <div>
-       <Header />
-     <YogaHeroSection />
-     <YogaAboutSection />
-     <YogaServicesSection />
-     <Specialities />
-     <YogaEventsSection />
-     <YogaMarquee />
-     <TestimonialsSection />
-     <FaqSection />
-     <YogaMoments />
-     <Footer />   
+      <Header />
+      <YogaHeroSection />
+      <YogaAboutSection />
+      <YogaServicesSection />
+      <Specialities />
+      <YogaEventsSection />
+      <YogaMarquee />
+      <TestimonialsSection />
+      <FaqSection />
+      <YogaMoments />
+      <Footer />
     </div>
   )
 }
