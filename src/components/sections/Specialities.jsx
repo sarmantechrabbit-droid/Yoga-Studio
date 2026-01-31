@@ -11,6 +11,8 @@ import yoga3 from "../../assets/image/yoga3.png";
 import yoga4 from "../../assets/image/yoga4.png";
 import yoga5 from "../../assets/image/yoga5.png";
 import yoga6 from "../../assets/image/yoga6.png";
+import yoga7 from "../../assets/image/yoga7.png";
+import yoga8 from "../../assets/image/yoga8.png";
 
 export default function Specialities() {
   return (
@@ -203,11 +205,7 @@ export default function Specialities() {
                   </p>
                 </div>
               </div>
-              {/* <img
-                src={yoga3}
-                className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:ml-4"
-                alt=""
-              /> */}
+              
             </div>
           </SwiperSlide>
 
@@ -237,30 +235,7 @@ export default function Specialities() {
                   </p>
                 </div>
               </div>
-              {/* <img
-                src={yoga3}
-                className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
-                alt=""
-              /> */}
-              {/* <div className="w-full h-[400px] font-body max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
              
-                <p className="text-[14px] sm:text-[15px] text-[#F28B5B] font-medium mb-16">
-                  Stretch / Tension Relief / Beginner
-                </p>
-
-              
-                <div>
-                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
-                    Weight Management
-                  </h3>
-
-                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
-                    Dynamic yoga flows support fat burn, boost metabolism, and
-                    improve digestion. A natural and sustainable way to maintain
-                    a healthy body.{" "}
-                  </p>
-                </div>
-              </div> */}
             </div>
           </SwiperSlide>
 
@@ -291,14 +266,7 @@ export default function Specialities() {
                 </div>
               </div>
 
-              {/* img2 → no gap with img1 */}
-
-              {/* img3 → gap from img2 */}
-              {/* <img
-                src={yoga5}
-                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
-                alt=""
-              /> */}
+             
             </div>
           </SwiperSlide>
           
@@ -307,7 +275,7 @@ export default function Specialities() {
             <div className="flex flex-col md:flex-row justify-center items-center">
               {/* img1 */}
               <img
-                src={yoga1}
+                src={yoga5}
                 className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto"
                 alt=""
               />
@@ -333,9 +301,8 @@ export default function Specialities() {
 
               {/* img2 → no gap with img1 */}
 
-              {/* img3 → gap from img2 */}
               <img
-                src={yoga5}
+                src={yoga6}
                 className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
                 alt=""
               />
@@ -354,7 +321,7 @@ export default function Specialities() {
                   <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
                                   Yoga enhances blood circulation and oxygen flow in the body. You feel more refreshed, active, and energized instead of fatigued.ss
 
-                  </p>{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -364,7 +331,7 @@ export default function Specialities() {
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
               <img
-                src={yoga6}
+                src={yoga8}
                 className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
                 alt=""
               />
@@ -394,7 +361,7 @@ export default function Specialities() {
             <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
               <img
-                src={yoga6}
+                src={yoga7}
                 className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
                 alt=""
               />
