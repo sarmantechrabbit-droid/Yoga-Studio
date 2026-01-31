@@ -5,10 +5,13 @@ export default function YogaEventsSection() {
   return (
     <section id="events">
       <div className="w-full bg-white py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <motion.div initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }} className="max-w-7xl mx-auto">
+          viewport={{ once: true, margin: "-100px" }}
+          className="max-w-7xl mx-auto"
+        >
           {/* Header Section */}
           <div className="text-center mb-6 sm:mb-12">
             <div className="flex flex-col items-center mb-3 sm:mb-4">
@@ -23,7 +26,7 @@ export default function YogaEventsSection() {
       whitespace-nowrap    
     "
               >
-                EVENTS & RETREATS
+                WhyChoose Us
               </p>
 
               <svg
@@ -46,31 +49,31 @@ export default function YogaEventsSection() {
             EVENTS & RETREATS
           </p> */}
             <h2 className="text-3xl font-heading sm:text-4xl lg:text-5xl font-normal text-gray-900 sm:mb-4 mb-3 leading-tight">
-              Find out more about our
+           Your Trusted Partner in 
               <br className="sm:block hidden" />
-              events and retreats
+              Holistic Wellness
             </h2>
             <p className="text-gray-600 font-body text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              Explore the ancient heritage of yoga through our classes, which are
-              accessible to all levels and accompanied by a balanced diet.
+            With years of experience and a personalized approach, Ripal Shah offers yoga sessions designed to fit your lifestyle and goals. Whether you prefer practicing at home or in the studio, you receive expert guidance, dedicated attention, and real, lasting results.
             </p>
           </div>
 
           {/* Hero Image */}
-          <div className="w-full mb-12">
+          {/* <div className="w-full mb-12">
             <img
               src={event}
               alt="Yoga silhouette at sunset"
               className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover sm:rounded-3xl rounded-2xl"
             />
-          </div>
+          </div> */}
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Feature 1 */}
-            <div className="text-center">
+            <div className="flex flex-col text-center border border-[#FFDCCD] rounded-2xl p-5 sm:p-7 h-full">
               <div className="flex justify-center mb-6">
                 <svg
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   height="80"
                   width="80"
                   fill="none"
@@ -120,20 +123,19 @@ export default function YogaEventsSection() {
                   </defs>
                 </svg>
               </div>
-              <h3 className="text-xl font-heading sm:text-2xl font-normal text-gray-900 mb-4">
-                Retreats Tailored to You
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-heading font-normal text-gray-900 mb-3 sm:mb-4">
+                Experienced & Certified Guidance
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-                Our retreats are designed to fit your needs, whether you're a yoga
-                novice or expert. Find the perfect balance of activity and
-                relaxation, and connect with like-minded individuals.
+              With 7+ years of professional experience in yoga and Ayurveda, every session is safe, structured, and focused on correct techniques for maximum benefit.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="text-center">
+            <div className="flex flex-col text-center border border-[#FFDCCD] rounded-2xl p-5 sm:p-7 h-full">
               <div className="flex justify-center mb-6">
                 <svg
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   height="80"
                   width="80"
                   fill="none"
@@ -260,20 +262,19 @@ export default function YogaEventsSection() {
                   </defs>
                 </svg>
               </div>
-              <h3 className="text-xl sm:text-2xl font-heading font-normal text-gray-900 mb-4">
-                Diverse Yoga Practices
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-heading font-normal text-gray-900 mb-3 sm:mb-4">
+                Personalized & Result-Oriented Approach
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-                Experience a variety of yoga styles to enrich your practice. Our
-                expert instructors guide you in finding the style that speaks to
-                you, from calming Yin to dynamic Ashtanga.
+              No one-size-fits-all routines. Each practice is customized according to your body type, fitness level, and health goals to ensure steady and sustainable progress.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="text-center sm:col-span-2 lg:col-span-1">
+            <div className="flex flex-col text-center sm:col-span-2 lg:col-span-1 border border-[#FFDCCD] rounded-2xl p-5 sm:p-7 h-full">
               <div className=" flex justify-center mb-6">
                 <svg
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                   height="80"
                   width="80"
                   fill="none"
@@ -288,12 +289,10 @@ export default function YogaEventsSection() {
                 </svg>
               </div>
               <h3 className="text-xl sm:text-2xl font-normal font-heading text-gray-900 mb-4">
-                Nature and Nurture
+                Online & Offline Flexibility
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-                Connect with the calming power of nature. Our retreats are set in
-                beautiful, peaceful locations that offer a perfect backdrop for
-                mindfulness and growth.
+              Choose what suits you best — attend peaceful studio sessions or join live online classes from home, making yoga accessible anytime, anywhere. 
               </p>
             </div>
           </div>

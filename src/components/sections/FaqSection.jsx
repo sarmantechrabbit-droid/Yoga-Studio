@@ -2,47 +2,47 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 const faqsLeft = [
   {
-    question: "What should I bring?",
-    answer: "Bring a yoga mat, comfortable clothing, and a water bottle.",
+    question: "Do I need prior yoga experience to join?",
+    answer: "No. Our sessions are beginner-friendly and suitable for all levels. Each practice is guided step-by-step to ensure comfort and safety.",
   },
   {
-    question: "Do you offer beginner classes?",
-    answer: "Yes, we offer beginner-friendly classes suitable for all levels.",
+    question: " What types of yoga classes do you offer?",
+    answer: "We offer personal training, group classes, meditation, pranayama, and holistic wellness sessions both online and offline.",
   },
   {
-    question: "Can I drop in for a class?",
-    answer: "Drop-ins are welcome, subject to class availability.",
+    question: "Are the sessions suitable for beginners?",
+    answer: "Yes. Classes are customized according to your fitness level, making them ideal for beginners as well as experienced practitioners.",
   },
   {
-    question: "Is yoga suitable for all ages?",
-    answer: "Absolutely. We offer classes tailored for different age groups.",
+    question: "Do you provide online yoga classes?",
+    answer: "Yes. You can join live online sessions from home with the same guidance and attention as studio classes.",
   },
   {
-    question: "What are class durations?",
-    answer: "Classes typically last between 60 and 90 minutes.",
+    question: "Do you also conduct offline or studio sessions?",
+    answer: "Yes. We offer in-studio and at-home personal sessions for those who prefer face-to-face training.",
   },
 ];
 
 const faqsRight = [
   {
-    question: "Do I need to be flexible?",
-    answer: "No flexibility is required. Yoga helps improve flexibility over time.",
+    question: " How long is each yoga session?",
+    answer: "Most sessions last 45–60 minutes, depending on the program and individual requirements.",
   },
   {
-    question: "Are private lessons available?",
-    answer: "Yes, private one-on-one sessions are available upon request.",
+    question: " Do you offer personalized one-on-one sessions?",
+    answer: "Yes. Personal training sessions are customized to your specific goals, health conditions, and fitness level.",
   },
   {
-    question: "What are the studio’s hours?",
-    answer: "We are open daily from 6:00 AM to 9:00 PM.",
+    question: "What time are classes available?",
+    answer: "We offer flexible morning and evening batches to suit different schedules",
   },
   {
-    question: "Can I attend while pregnant?",
-    answer: "Yes, we offer prenatal yoga classes. Consult your doctor first.",
+    question: "16. How soon can I see results?",
+    answer: "Many students notice improvements in energy and relaxation within a few weeks. Physical changes typically become visible with consistent practice.",
   },
   {
-    question: "Do you offer meditation classes?",
-    answer: "Yes, meditation sessions are available weekly.",
+    question: "How do I book a class?",
+    answer: "You can contact us via phone, WhatsApp, or the website to schedule your preferred session or batch.",
   },
 ];
 

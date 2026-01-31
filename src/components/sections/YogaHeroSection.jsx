@@ -35,7 +35,7 @@ const YogaHeroSection = () => {
               className="font-heading text-white text-center font-normal mb-3 sm:mb-6 leading-tight max-w-3xl mx-auto
   text-4xl sm:text-5xl md:text-6xl lg:text-[88px] lg:leading-[105.6px]"
             >
-              Welcome to Ripal Shah <br className="sm:block hidden" /> Yoga Studio
+             Welcome to Ripal Shah<br className="sm:block hidden" /> Yoga Studio
             </motion.h1>
 
 
@@ -44,9 +44,9 @@ const YogaHeroSection = () => {
               variants={fadeUp}
               className="text-white text-center font-body font-medium mb-3 sm:mb-10 md:mb-12 px-0 sm:px-4 max-w-3xl text-sm sm:text-lg md:text-xl leading-relaxed"
             >
-              A 360° holistic health approach through Yoga, Ayurveda & Nutrition —
+             Guiding your wellness journey with 7+ years of experience in yoga,
               <br className="hidden sm:block" />
-              guided by Ripal Shah, Certified Ayurveda & Yoga Trainer.
+              Ayurveda, and holistic health.
             </motion.p>
 
 
@@ -77,7 +77,7 @@ const YogaHeroSection = () => {
                 </svg>
               </motion.button>
 
-              <motion.button variants={buttonAnim} className="group px-3 cursor-pointer sm:px-8 py-2 sm:py-4 bg-[#565654] backdrop-blur-sm text-white font-semibold rounded-[10px] border-2 border-white/30 hover:bg-white/20 hover:border-white/50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 min-w-[180px] sm:min-w-[200px]">
+              {/* <motion.button variants={buttonAnim} className="group px-3 cursor-pointer sm:px-8 py-2 sm:py-4 bg-[#565654] backdrop-blur-sm text-white font-semibold rounded-[10px] border-2 border-white/30 hover:bg-white/20 hover:border-white/50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 min-w-[180px] sm:min-w-[200px]">
                 <span className="text-sm sm:text-base md:text-lg font-body">
                   Explore Our Classes
                 </span>
@@ -96,7 +96,7 @@ const YogaHeroSection = () => {
                     strokeWidth="2"
                   />
                 </svg>
-              </motion.button>
+              </motion.button> */}
             </motion.div>
 
             {/* Success Badge */}
@@ -106,7 +106,7 @@ const YogaHeroSection = () => {
 
               <div className="inline-flex relative items-center gap-1.5 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-white rounded-tr-xl rounded-tl-xl ">
                 <span className="text-gray-900 font-medium text-xs sm:text-base md:text-base whitespace-nowrap">
-                  500+ Successful Sessions
+                7+ years of experience
                 </span>
                 <div className="flex gap-0.5">
                   {[1, 2, 3, 4, 5].map((star) => (

@@ -52,7 +52,7 @@ const CircleImage = ({ src }) => (
 
 export default function YogaMarquee() {
   return (
-    <div className="relative w-full py-8 sm:py-12 md:py-20 overflow-hidden bg-white">
+    <div className="relative w-full overflow-hidden bg-white">
       {/* LEFT white fade */}
       <div className="pointer-events-none absolute top-0 left-0 h-full w-8 sm:w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-20" />
 

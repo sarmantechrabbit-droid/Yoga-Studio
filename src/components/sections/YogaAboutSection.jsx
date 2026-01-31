@@ -227,8 +227,8 @@ const YogaAboutSection = () => {
           />
         </svg>
       ),
-      title: "Personalized Guidance",
-      description: "One-on-one support to help you reach your yoga goals.",
+      title: "Tailored Yoga Programs",
+      description: "Every session is customized to your body type, goals, and fitness level for safe and effective progress.",
     },
     {
       icon: (
@@ -246,8 +246,8 @@ const YogaAboutSection = () => {
           />
         </svg>
       ),
-      title: "Mindful Practices",
-      description: "Focus on meditation and mindfulness in every session.",
+      title: "Mind–Body Integration",
+      description: "Blend asanas, breathwork, and meditation to improve flexibility, reduce stress, and enhance mental clarity.",
     },
     {
       icon: (
@@ -272,9 +272,9 @@ const YogaAboutSection = () => {
           </defs>
         </svg>
       ),
-      title: "Diverse Classes",
+      title: " Holistic Wellness Approach",
       description:
-        "A wide variety of yoga styles, from Ashtanga to Restorative.",
+        "Beyond yoga — guidance in Ayurveda, lifestyle habits, and nutrition for complete well-being.",
     },
     {
       icon: (
@@ -292,8 +292,8 @@ const YogaAboutSection = () => {
           />
         </svg>
       ),
-      title: "Relaxing Atmosphere",
-      description: "Peaceful, calming studio designed for relaxation.",
+      title: "Trusted Experience",
+      description: "7+ years of professional training with hundreds of successful sessions and happy clients.",
     },
   ];
 
@@ -334,7 +334,7 @@ const YogaAboutSection = () => {
           </defs>
         </svg>
       ),
-      text: "Certified Trainers",
+      text: "Certified Expertise",
     },
     {
       icon: (
@@ -372,7 +372,7 @@ const YogaAboutSection = () => {
           </defs>
         </svg>
       ),
-      text: "Personalized Guidance",
+      text: "Personalized Sessions",
     },
     {
       icon: (
@@ -448,7 +448,7 @@ const YogaAboutSection = () => {
           </defs>
         </svg>
       ),
-      text: "Diverse Classes",
+      text: "Mindful Practices",
     },
     {
       icon: (
@@ -486,7 +486,7 @@ const YogaAboutSection = () => {
           </defs>
         </svg>
       ),
-      text: "Mindful Practices",
+      text: "7+ Years Experience",
     },
   ];
   function Badge({ badge }) {
@@ -638,9 +638,9 @@ const YogaAboutSection = () => {
                 leading-[44px] sm:leading-[58px] md:leading-[74px] lg:leading-[91.052px]
               "
               >
-                About Ripal Shah
+               About us
                 <br />
-                Yoga Studio
+                
               </motion.h2>
 
               <motion.p
@@ -656,12 +656,8 @@ const YogaAboutSection = () => {
                 leading-[24px] sm:leading-[27px] md:leading-[30.128px]
               "
               >
-                Ripal Shah is a Certified Ayurveda & Yoga Trainer and Nutritionist
-                dedicated to holistic healing. Her journey began with a deep belief
-                that true wellness comes from balance — of body, mind, and breath.
-                Through personalized yoga, pranayama, meditation, and Ayurvedic
-                guidance, she helps individuals breathe through stress, heal
-                naturally, and live mindfully.
+              Ripal Shah is a certified Yoga, Ayurveda, and wellness trainer with over 7 years of hands-on experience guiding individuals toward healthier, more balanced lives. Her approach combines traditional yoga practices with modern lifestyle understanding to create personalized sessions that strengthen the body, calm the mind, and restore inner harmony. Through asanas, pranayama, meditation, and holistic wellness guidance, Ripal helps clients reduce stress, improve flexibility, and build sustainable health habits that last beyond the mat.
+
               </motion.p>
 
               {/* Badges */}

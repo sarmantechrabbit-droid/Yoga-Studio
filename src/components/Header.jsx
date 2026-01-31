@@ -22,11 +22,11 @@ export default function Header() {
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Specialties", href: "#specialities" },
-    { name: "Events & Retreats", href: "#events" },
+    { name: "WhyChoose Us", href: "#events" },
     { name: "Testimonial", href: "#testimonials" },
     { name: "FAQ'S", href: "#faqs" },
   ];
+    // { name: "Specialties", href: "#specialities" },
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function Header() {
         <div className="max-w-8xl mx-auto sm:py-0 py-4 sm:h-[100px] flex items-center justify-between px-4 md:px-6">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Logo" className="h-10 w-auto xl:h-12" />
+            <img src={logo} alt="Logo" className="h-12 w-auto lg:h-15" />
           </a>
 
           {/* Desktop Navigation */}
@@ -53,19 +53,20 @@ export default function Header() {
           </nav>
 
           {/* Desktop Button */}
-          <button className="hidden h-[50px] font-body lg:flex items-center gap-2 bg-[#E59B6C] text-white text-[14px] font-medium px-5 py-2 rounded-[10px] hover:opacity-90 transition">
-            Contact Us
-            <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
-              <path
-                d="M3.21289 9.99994H15.8439M15.8439 9.99994L11.1069 5.26294M15.8439 9.99994L11.1069 14.7369"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-
+          <a href="#contact">
+            <button className="hidden h-[50px] font-body lg:flex items-center gap-2 bg-[#E59B6C] text-white text-[14px] font-medium px-5 py-2 rounded-[10px] hover:opacity-90 transition">
+              Contact Us
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
+                <path
+                  d="M3.21289 9.99994H15.8439M15.8439 9.99994L11.1069 5.26294M15.8439 9.99994L11.1069 14.7369"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </a>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(true)}
@@ -92,8 +93,9 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-0 right-0 z-70 h-full w-[300px] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${open ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 z-70 h-full w-[300px] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Drawer Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-100">

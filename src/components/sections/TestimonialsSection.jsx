@@ -9,19 +9,19 @@ export default function TestimonialsSection() {
       name: "Rachel Davis",
       image: test1,
       rating: 5,
-      text: "Samadhi Yoga Studio has transformed my life. The instructors are so knowledgeable, and the environment is incredibly welcoming. I feel stronger every day!"
+      text: "Joining Ripal’s yoga sessions has completely changed my lifestyle. My back pain has reduced, my flexibility has improved, and I feel more energetic every day. Her guidance is calm, clear, and very motivating."
     },
     {
       name: "Laura Martin",
       image: test2,
       rating: 5,
-      text: "The classes are perfectly tailored for all levels, and the sense of community here is amazing. I always leave feeling refreshed and rejuvenated."
+      text: "I love how every class is personalized to my needs. Ripal pays attention to each posture and ensures we practice safely. I feel stronger, more balanced, and mentally relaxed after every session."
     },
     {
       name: "David Thompson",
       image: test3,
       rating: 4,
-      text: "Every instructor at Samadhi Yoga Studio is so patient and attentive. My flexibility and strength have improved significantly since I started coming here."
+      text: "The online classes are so convenient and effective. Even from home, I receive proper instruction and support. It feels just like attending a studio session."
     }
   ];
 
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
       <motion.div initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, margin: "-100px" }} className="w-full bg-white px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        viewport={{ once: true, margin: "-100px" }} className="w-full bg-white px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-16">

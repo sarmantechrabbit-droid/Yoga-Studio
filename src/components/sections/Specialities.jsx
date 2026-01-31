@@ -2,26 +2,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { motion } from "framer-motion";
-import img1 from "../../assets/image/yogadog1.png";
-import img2 from "../../assets/image/yogadog2.png";
-import yoga3 from "../../assets/image/yogadog3.png";
-import yoga4 from "../../assets/image/yogadog4.png";
-import yoga5 from "../../assets/image/yogadog5.png";
-import img3 from "../../assets/image/Content1.png";
-import content2 from "../../assets/image/Content2.png";
-import content3 from "../../assets/image/Content 3.png";
-import content4 from "../../assets/image/Content 4.png";
+
 import { fadeUp } from "../../assets/animation/motionAnimation";
 
-
-
+import yoga1 from "../../assets/image/yoga1.png";
+import yoga2 from "../../assets/image/yoga2.png";
+import yoga3 from "../../assets/image/yoga3.png";
+import yoga4 from "../../assets/image/yoga4.png";
+import yoga5 from "../../assets/image/yoga5.png";
+import yoga6 from "../../assets/image/yoga6.png";
 
 export default function Specialities() {
   return (
-    <motion.section id="specialities" className="max-w-[1400px] mx-auto px-6 py-10 sm:py-16 " initial={{ opacity: 0, y: 30 }}
+    <motion.section
+      id="specialities"
+      className="max-w-7xl mx-auto px-6 py-10 sm:py-16 "
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, margin: "-100px" }}>
+      viewport={{ once: true, margin: "-100px" }}
+    >
       {/* ================= TOP CONTENT ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
@@ -39,7 +39,7 @@ export default function Specialities() {
     mx-auto
   "
             >
-              Our Specialities
+              Benefits of Yoga
             </p>
 
             {/* SVG — UNCHANGED */}
@@ -59,13 +59,14 @@ export default function Specialities() {
           </p> */}
 
           <h2 className="sm:text-[42px] text-[36px] sm:leading-[52px] leading-[42px]  font-heading  text-[#1F1F1F] mb-3 sm:mb-6">
-            Classes designed for all <br className="sm:block hidden" /> experience levels
+            Wellness That Reflects in <br className="sm:block hidden" /> Every
+            Breath.
           </h2>
 
           <p className="text-[#6B6B6B] font-body text-[16px] leading-[26px] max-w-md">
-            Discover a unique journey where you and your furry friends can move,
-            stretch, and bond together. Our classes are designed to create a fun
-            and relaxing environment for both humans and pets.
+            Regular yoga practice creates lasting improvements in both physical
+            health and mental well-being, helping you live a more balanced and
+            energized life.
           </p>
         </div>
 
@@ -139,35 +140,287 @@ export default function Specialities() {
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
               {/* img1 */}
-              <img src={img1} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto" alt="" />
+              <img
+                src={yoga1}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto"
+                alt=""
+              />
 
               {/* img2 → no gap with img1 */}
-              <img src={img3} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:-ml-1" alt="" />
+              <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] font-body  sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Strength & Flexibility
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Build muscle strength while improving flexibility and joint
+                    mobility. Move freely in daily life with better posture and
+                    reduced stiffness.
+                  </p>
+                </div>
+              </div>
 
               {/* img3 → gap from img2 */}
-              <img src={img2} className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4" alt="" />
+              {/* <img
+                src={yoga2}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
+                alt=""
+              /> */}
             </div>
           </SwiperSlide>
 
           {/* SLIDE 2 */}
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
-              <img src={yoga3} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto" alt="" />
-              <img src={content2} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:-ml-1" alt="" />
-              <img src={yoga4} className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:ml-4" alt="" />
+              <img
+                src={yoga2}
+                className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto"
+                alt=""
+              />
+              <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] font-body sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Stress & Anxiety Relief
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Gentle breathing and mindful movements calm the nervous
+                    system. Feel lighter, more relaxed, and emotionally balanced
+                    after every session.{" "}
+                  </p>
+                </div>
+              </div>
+              {/* <img
+                src={yoga3}
+                className="rounded-3xl object-cover w-[310px] sm:w-full md:w-auto md:ml-4"
+                alt=""
+              /> */}
             </div>
           </SwiperSlide>
 
           {/* SLIDE 3 */}
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
-              <img src={content3} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto" alt="" />
-              <img src={yoga5} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1" alt="" />
-              <img src={content4} className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:ml-4" alt="" />
+              <img
+                src={yoga3}
+                className="rounded-3xl object-cover w-[300px] sm:w-auto md:-ml-1"
+              />
+              <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] font-body sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Better Focus & Mental Clarity
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Meditation and breathwork sharpen concentration and clear
+                    mental clutter. Stay productive, focused, and present
+                    throughout your day.
+                  </p>
+                </div>
+              </div>
+              {/* <img
+                src={yoga3}
+                className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
+                alt=""
+              /> */}
+              {/* <div className="w-full h-[400px] font-body max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+             
+                <p className="text-[14px] sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+              
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Weight Management
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Dynamic yoga flows support fat burn, boost metabolism, and
+                    improve digestion. A natural and sustainable way to maintain
+                    a healthy body.{" "}
+                  </p>
+                </div>
+              </div> */}
             </div>
           </SwiperSlide>
-        </Swiper>
 
+          {/* SLIDE 4 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              {/* img1 */}
+              <img
+                src={yoga4}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto"
+                alt=""
+              />
+              <div className="w-full h-[400px] font-body max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                <p className="text-[14px] sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Weight Management
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Dynamic yoga flows support fat burn, boost metabolism, and
+                    improve digestion. A natural and sustainable way to maintain
+                    a healthy body.{" "}
+                  </p>
+                </div>
+              </div>
+
+              {/* img2 → no gap with img1 */}
+
+              {/* img3 → gap from img2 */}
+              {/* <img
+                src={yoga5}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
+                alt=""
+              /> */}
+            </div>
+          </SwiperSlide>
+          
+          {/* SLIDE 5 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              {/* img1 */}
+              <img
+                src={yoga1}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto"
+                alt=""
+              />
+              <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] font-body sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Improved Posture & Back Care
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Correct alignment techniques strengthen your spine and core
+                    muscles. Helps reduce back pain, neck strain, and long hours
+                    of sitting discomfort.{" "}
+                  </p>
+                </div>
+              </div>
+
+              {/* img2 → no gap with img1 */}
+
+              {/* img3 → gap from img2 */}
+              <img
+                src={yoga5}
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
+                alt=""
+              />
+              <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] font-body sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                   
+                       Increased Energy Levels
+                  </h3>
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                                  Yoga enhances blood circulation and oxygen flow in the body. You feel more refreshed, active, and energized instead of fatigued.ss
+
+                  </p>{" "}
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* SLIDE 6 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <img
+                src={yoga6}
+                className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
+                alt=""
+              />
+              <div className="w-full h-[400px] font-body max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                    Holistic Mind–Body Balance
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                    Combining yoga, breath, and mindfulness creates harmony
+                    within. Experience complete wellness — physically, mentally,
+                    and emotionally.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+
+            <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <img
+                src={yoga6}
+                className="rounded-3xl object-cover w-[300px] sm:w-full md:w-auto md:-ml-1"
+                alt=""
+              />
+              <div className="w-full h-[400px] font-body max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
+                {/* Top Label */}
+                <p className="text-[14px] sm:text-[15px] text-[#F28B5B] font-medium mb-16">
+                  Stretch / Tension Relief / Beginner
+                </p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
+                 Better Sleep Quality
+                  </h3>
+
+                  <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
+                     Relaxation practices ease tension and quiet the mind before
+                    bedtime. Enjoy deeper, more restful sleep and wake up
+                    feeling renewed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          
+        </Swiper>
       </div>
     </motion.section>
   );

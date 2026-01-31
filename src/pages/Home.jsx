@@ -10,6 +10,7 @@ import TestimonialsSection from '../components/sections/TestimonialsSection'
 import FaqSection from '../components/sections/FaqSection'
 import YogaMoments from '../components/sections/YogaMoments'
 import Footer from '../components/sections/Footer'
+import ContactSection from '../components/sections/ContactSection'
 
 function Home() {
   return (
@@ -23,7 +24,8 @@ function Home() {
       <YogaMarquee />
       <TestimonialsSection />
       <FaqSection />
-      <YogaMoments />
+      {/* <YogaMoments /> */}
+      <ContactSection />
       <Footer />
     </div>
   )

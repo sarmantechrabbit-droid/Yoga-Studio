@@ -1,34 +1,24 @@
 import React from "react";
 import servicebg from "../../assets/image/servicebg.png";
 import { motion } from "framer-motion";
-import { container, fadeUp, sectionVariant, cardVariant, scaleFade } from "../../assets/animation/motionAnimation";
+import {
+  container,
+  fadeUp,
+  sectionVariant,
+  cardVariant,
+  scaleFade,
+} from "../../assets/animation/motionAnimation";
 const YogaServicesSection = () => {
   const services = [
     {
       id: 1,
       icon: (
-        <svg
-          height="62"
-          width="62"
-          fill="none"
-          viewBox="0 0 62 62"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clipPath="url(#clip0_10_2400)">
-            <path
-              d="M61.7868 37.8667C61.6848 37.7443 61.5482 37.6553 61.3996 37.5975C60.297 37.1683 59.1217 36.8292 57.9053 36.5895C57.4131 36.4925 56.9084 36.7843 56.7994 37.2741C56.688 37.7751 57.0117 38.2661 57.5122 38.3636C58.285 38.5141 59.0389 38.7081 59.764 38.9428C57.2422 43.0552 52.9173 46.4583 47.7367 48.3711C44.0184 49.744 40.1365 50.2453 36.5443 49.8697C41.3716 48.4669 46.0784 45.6494 49.9884 41.7393C55.3695 36.3581 58.6839 29.468 59.0846 22.8316C59.0962 22.6398 59.0576 22.4453 58.9574 22.2813C58.7777 21.9871 58.4584 21.8249 58.1259 21.8443C54.6747 22.0486 51.1547 23.043 47.813 24.705C48.0367 21.5937 47.7605 18.5375 46.9961 15.7809C46.9535 15.6272 46.8788 15.4822 46.767 15.3683C46.4981 15.0946 46.1039 15.0236 45.7696 15.1609C42.7611 16.3968 39.8598 18.3502 37.3086 20.8458C36.1237 16.9008 34.2147 13.3601 31.695 10.5175C31.5893 10.3982 31.4585 10.3007 31.3082 10.2477C30.9465 10.1198 30.561 10.229 30.3209 10.4994C27.7994 13.3382 25.8859 16.9016 24.6974 20.8521C22.1508 18.3596 19.2553 16.4075 16.2521 15.17C16.1048 15.1092 15.9444 15.0793 15.786 15.0977C15.405 15.142 15.1069 15.4093 15.0101 15.7575C14.2409 18.5203 13.9624 21.5851 14.1866 24.7053C10.8449 23.0433 7.32498 22.0488 3.8738 21.8446C3.51319 21.823 3.16419 22.0181 2.99818 22.3631C2.92915 22.5065 2.90517 22.6676 2.91474 22.8265C3.31399 29.4648 6.62869 36.357 12.0113 41.7397C15.9215 45.6499 20.6286 48.4674 25.4559 49.8701C21.8635 50.2458 17.9813 49.7443 14.2629 48.3715C9.08241 46.4588 4.75743 43.0557 2.23565 38.9432C2.95131 38.7116 3.69507 38.5197 4.45735 38.37C4.94137 38.2749 5.28891 37.8168 5.2108 37.3297C5.12906 36.8201 4.64239 36.4831 4.14033 36.5812C2.90772 36.8213 1.71676 37.1633 0.600277 37.598C0.451694 37.6559 0.315101 37.7448 0.213019 37.8672C-0.0325594 38.1622 -0.0636805 38.5618 0.10682 38.8809C2.73056 43.79 7.66089 47.8703 13.6337 50.0755C16.756 51.2283 19.9938 51.8065 23.1146 51.8064C25.2485 51.8063 27.3272 51.5348 29.2761 50.9924C29.8053 50.8452 30.3505 50.7641 30.8997 50.7641H31.0993C31.6486 50.7641 32.1939 50.8453 32.7232 50.9926C34.6719 51.5349 36.7504 51.8065 38.8845 51.8065C42.0051 51.8065 45.2435 51.2283 48.3655 50.0756C54.3383 47.8704 59.2686 43.7901 61.8924 38.881C62.0633 38.5613 62.0322 38.1617 61.7868 37.8667ZM16.5034 17.2649C19.2428 18.5517 21.8668 20.4803 24.157 22.8917C23.5927 25.3386 23.297 27.9043 23.297 30.5165C23.297 30.8286 23.3017 31.1413 23.3101 31.4538C23.145 31.2818 22.978 31.1111 22.8089 30.942C20.7613 28.8943 18.4949 27.1469 16.1074 25.7445C15.7711 22.8113 15.907 19.9078 16.5034 17.2649ZM13.2959 40.4549C8.50273 35.6616 5.45129 29.6269 4.8147 23.7452C10.6963 24.3817 16.7312 27.4333 21.5243 32.2264C26.3174 37.0197 29.3689 43.0544 30.0055 48.936C24.1239 48.2995 18.0891 45.248 13.2959 40.4549ZM31 44.6013C29.924 40.7808 27.96 37.0297 25.2668 33.6818C25.1662 32.6383 25.1133 31.5749 25.1133 30.5165C25.1133 23.6625 27.2478 17.1661 31.0003 12.508C34.312 16.6133 36.3613 22.1078 36.7993 28.1079C36.8359 28.6081 37.2709 28.9841 37.7712 28.9476C38.2715 28.911 38.6474 28.4758 38.6109 27.9757C38.4837 26.2337 38.2265 24.531 37.8487 22.8857C40.1376 20.4772 42.7595 18.5507 45.4966 17.2649C46.093 19.9078 46.2288 22.8113 45.8926 25.7445C43.5051 27.147 41.2387 28.8944 39.1912 30.942C35.2232 34.9102 32.3808 39.699 31 44.6013ZM40.4756 32.2264C45.2689 27.4333 51.3036 24.3817 57.1852 23.7452C56.5487 29.6269 53.4972 35.6617 48.704 40.4549C43.9108 45.248 37.8761 48.2995 31.9944 48.936C32.631 43.0545 35.6825 37.0197 40.4756 32.2264Z"
-              fill="#E1916E"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_10_2400">
-              <rect height="62" width="62" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <path d="M45.5496 21.9352L39.6586 14.5758C38.9696 13.7145 37.9828 13.241 36.8801 13.241H24.1946C23.0918 13.241 22.1051 13.7156 21.4161 14.5758L15.525 21.9352C14.7235 22.9371 14.5653 24.5309 15.1664 25.5645C15.5543 26.2324 16.1965 26.5945 16.9664 26.5945C17.1012 26.5945 17.2395 26.5828 17.3813 26.5605C19.6723 26.1961 21.6528 25.8387 23.5489 25.4402V28.2164L15.2344 35.8781C13.7977 37.2012 13.3594 38.9449 14.0309 40.6641C14.8735 42.8227 17.2758 44.3895 19.7438 44.3895H29.986V57.5391C29.986 57.927 30.3012 58.2422 30.6891 58.2422H36.8227C37.2106 58.2422 37.5258 57.927 37.5258 57.5391V28.5293C37.5258 28.5293 37.5258 28.5293 37.5258 28.5281C37.5258 28.527 37.5258 28.527 37.5258 28.5258V25.4414C39.4219 25.8387 41.4024 26.1973 43.6934 26.5617C44.645 26.7129 45.4512 26.3496 45.9082 25.5656C46.5082 24.532 46.3512 22.9371 45.5496 21.9352ZM31.3922 56.8359V34.4812C31.3922 34.0934 31.077 33.7781 30.6891 33.7781C30.3012 33.7781 29.986 34.0934 29.986 34.4812V36.8484H22.4239C22.036 36.8484 21.7207 37.1637 21.7207 37.5516C21.7207 37.9395 22.036 38.2547 22.4239 38.2547H29.986V42.982H19.7438C17.8641 42.982 15.9715 41.7656 15.3411 40.152C14.8852 38.9848 15.1864 37.8352 16.1871 36.9129L24.5274 29.2289H36.1207V56.8359H31.3922ZM36.1196 27.8227H24.9539V25.1355C26.4364 24.8016 27.9 24.4348 29.4575 24.0105C29.8805 23.8957 30.2485 23.6777 30.5391 23.3895C30.8297 23.6789 31.1965 23.8969 31.6161 24.0105C33.1735 24.4348 34.6371 24.8016 36.1196 25.1355V27.8227ZM44.6918 24.8578C44.5828 25.0441 44.3965 25.2492 43.9137 25.173C39.286 24.4371 35.9414 23.7305 31.9852 22.6535C31.5481 22.5352 31.2563 22.1672 31.2399 21.716C31.2399 21.7113 31.2399 21.7055 31.2387 21.7008C31.2387 21.6937 31.2387 21.6855 31.2387 21.6785V18.8543C31.2387 18.4664 30.9235 18.1512 30.5356 18.1512C30.1477 18.1512 29.8325 18.4664 29.8325 18.8543V21.6785C29.8325 22.1473 29.5395 22.5305 29.0871 22.6535C25.1309 23.7305 21.7864 24.4359 17.1586 25.173C16.6758 25.2492 16.4895 25.0453 16.3805 24.8578C16.0676 24.3199 16.1801 23.3648 16.6219 22.8141L22.5129 15.4547C22.9418 14.9191 23.5078 14.6473 24.1934 14.6473H36.8789C37.5657 14.6473 38.1317 14.9191 38.5606 15.4547L44.4516 22.8141C44.8922 23.3648 45.0047 24.3199 44.6918 24.8578ZM30 11.7199C32.7469 11.7199 34.9817 9.48516 34.9817 6.73828C34.9817 3.99141 32.7469 1.75781 30 1.75781C27.2532 1.75781 25.0184 3.99258 25.0184 6.73945C25.0184 9.48633 27.2532 11.7199 30 11.7199ZM30 3.16406C31.9711 3.16406 33.5754 4.76836 33.5754 6.73945C33.5754 8.71055 31.9711 10.3137 30 10.3137C28.0289 10.3137 26.4246 8.70937 26.4246 6.73828C26.4246 4.76719 28.0289 3.16406 30 3.16406Z" fill="#E1916E"/>
+</svg>
       ),
-      title: "Vinyasa Yoga",
-      description: "Lorem Ipsum Dolor Sit Amet, Consectetur",
+      title: " Personal Yoga Training",
+      description: "One-on-one sessions tailored to your fitness level, body type, and health goals for faster, safer, and more effective results.",
     },
     {
       id: 2,
@@ -54,8 +44,8 @@ const YogaServicesSection = () => {
           />
         </svg>
       ),
-      title: "Intuitive Yoga",
-      description: "Lorem Ipsum Dolor Sit Amet, Consectetur",
+      title: "Group Yoga Classes",
+      description: "Energizing and supportive group sessions that improve flexibility, posture, and strength while keeping you motivated in a positive environment.",
     },
     {
       id: 3,
@@ -73,8 +63,8 @@ const YogaServicesSection = () => {
           />
         </svg>
       ),
-      title: "Slow Yoga",
-      description: "Lorem Ipsum Dolor Sit Amet, Consectetur",
+      title: "Meditation & Pranayama",
+      description: "Guided breathing techniques and mindfulness practices to calm the mind, reduce anxiety, and enhance mental clarity.",
     },
     {
       id: 4,
@@ -96,34 +86,41 @@ const YogaServicesSection = () => {
           />
         </svg>
       ),
-      title: "Aroma Yoga",
-      description: "Lorem Ipsum Dolor Sit Amet, Consectetur",
+      title: "Holistic Wellness Guidance",
+      description: "Integrated support with Ayurveda-based lifestyle tips, nutrition advice, and daily habits to promote complete mind–body balance.",
     },
   ];
 
   return (
     <section id="services">
       <div className="w-full bg-white py-10 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <motion.div variants={sectionVariant}
+        <motion.div
+          variants={sectionVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }} className="max-w-7xl mx-auto">
+          viewport={{ once: true, margin: "-100px" }}
+          className="max-w-7xl mx-auto"
+        >
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }} className="text-center mb-10 sm:mb-20 md:mb-28 lg:mb-[150px]">
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-10 sm:mb-20 md:mb-28 lg:mb-[150px]"
+          >
             {/* Top label */}
             <div className="inline-block mb-4">
-              <p className="
+              <p
+                className="
       text-[#E1916E]
       font-serif font-normal uppercase text-center
       tracking-[2px] sm:tracking-[3.789px]
       text-[16px] sm:text-[20px] lg:text-[25.263px]
       leading-[22px] sm:leading-[28px] lg:leading-[32.842px]
       mx-auto
-    ">
+    "
+              >
                 Our Services
               </p>
 
@@ -148,7 +145,7 @@ const YogaServicesSection = () => {
         max-w-full sm:max-w-[520px] lg:max-w-[602.723px]
       "
               >
-                We're The Ones That Care
+                Yoga for Every Body, Every Goal
               </h2>
 
               <p
@@ -159,18 +156,19 @@ const YogaServicesSection = () => {
         max-w-full sm:max-w-[720px] lg:max-w-[964.067px]
       "
               >
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-                Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
-                Enim Ad Minim Veniam.
+                From personalized training to holistic wellness guidance, our
+                services are designed to help you build strength, reduce stress,
+                and create a healthier lifestyle through mindful yoga practices.
               </p>
             </div>
           </motion.div>
 
-
           {/* Services Grid with Center Image */}
           {/* Services Grid with Center Image */}
           <motion.div
-            variants={scaleFade} className="relative max-w-7xl mx-auto mb-6 sm:mb-12">
+            variants={scaleFade}
+            className="relative max-w-7xl mx-auto mb-6 sm:mb-12"
+          >
             {/* Center Background Image — DESKTOP/TABLET ONLY */}
             <div
               className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0
@@ -228,7 +226,10 @@ const YogaServicesSection = () => {
               </div>
 
               {/* Bottom Left */}
-              <motion.div variants={cardVariant} className="flex justify-center sm:justify-start">
+              <motion.div
+                variants={cardVariant}
+                className="flex justify-center sm:justify-start"
+              >
                 <div
                   className="bg-white p-6 rounded-2xl
       shadow-[0_8px_20px_rgba(0,0,0,0.08)]
@@ -247,7 +248,10 @@ const YogaServicesSection = () => {
               </motion.div>
 
               {/* Bottom Right */}
-              <motion.div variants={cardVariant} className="flex justify-center sm:justify-end">
+              <motion.div
+                variants={cardVariant}
+                className="flex justify-center sm:justify-end"
+              >
                 <div
                   className="bg-white p-6 rounded-2xl
       shadow-[0_8px_20px_rgba(0,0,0,0.08)]
@@ -368,7 +372,7 @@ const YogaServicesSection = () => {
               </svg>
             </div>
 
-            <button
+            {/* <button
               className="
           font-body
           inline-flex
@@ -409,7 +413,7 @@ const YogaServicesSection = () => {
                   fill="white"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </motion.div>
       </div>
