@@ -129,13 +129,15 @@ export default function Specialities() {
             prevEl: ".prev-btn",
             nextEl: ".next-btn",
           }}
-          slidesPerView={1} // default for mobile
-          spaceBetween={20} // general spacing
+          className="specialities-swiper"
+          slidesPerView={1}
+          spaceBetween={20}
+          autoHeight={true}
           breakpoints={{
             640: { slidesPerView: 1, spaceBetween: 20 }, // sm
-            768: { slidesPerView: 1, spaceBetween: 30 }, // md / tablet
-            1024: { slidesPerView: 1, spaceBetween: 40 }, // lg / desktop
-            1280: { slidesPerView: 1, spaceBetween: 40 }, // xl / large screens
+            768: { slidesPerView: "auto", spaceBetween: 30 }, // md / tablet
+            1024: { slidesPerView: "auto", spaceBetween: 40 }, // lg / desktop
+            1280: { slidesPerView: "auto", spaceBetween: 40 }, // xl / large screens
           }}
         >
           {/* SLIDE 1 */}
@@ -205,7 +207,7 @@ export default function Specialities() {
                   </p>
                 </div>
               </div>
-              
+
             </div>
           </SwiperSlide>
 
@@ -235,7 +237,7 @@ export default function Specialities() {
                   </p>
                 </div>
               </div>
-             
+
             </div>
           </SwiperSlide>
 
@@ -266,10 +268,10 @@ export default function Specialities() {
                 </div>
               </div>
 
-             
+
             </div>
           </SwiperSlide>
-          
+
           {/* SLIDE 5 */}
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
@@ -294,16 +296,19 @@ export default function Specialities() {
                   <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
                     Correct alignment techniques strengthen your spine and core
                     muscles. Helps reduce back pain, neck strain, and long hours
-                    of sitting discomfort.{" "}
+                    of sitting discomfort.
                   </p>
                 </div>
               </div>
+            </div>
+          </SwiperSlide>
 
-              {/* img2 → no gap with img1 */}
-
+          {/* SLIDE 6 */}
+          <SwiperSlide>
+            <div className="flex flex-col md:flex-row justify-center items-center">
               <img
                 src={yoga6}
-                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto md:ml-4"
+                className="rounded-3xl object-cover w-[318px] sm:w-full md:w-auto"
                 alt=""
               />
               <div className="w-full h-[400px] max-w-[340px] bg-[#FFF1E8] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between">
@@ -315,19 +320,19 @@ export default function Specialities() {
                 {/* Content */}
                 <div>
                   <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
-                   
-                       Increased Energy Levels
+                    Increased Energy Levels
                   </h3>
                   <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
-                                  Yoga enhances blood circulation and oxygen flow in the body. You feel more refreshed, active, and energized instead of fatigued.ss
-
+                    Yoga enhances blood circulation and oxygen flow in the body.
+                    You feel more refreshed, active, and energized instead of
+                    fatigued.
                   </p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
 
-          {/* SLIDE 6 */}
+          {/* SLIDE 7 */}
           <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
               <img
@@ -357,8 +362,8 @@ export default function Specialities() {
             </div>
           </SwiperSlide>
 
-
-            <SwiperSlide>
+          {/* SLIDE 8 */}
+          <SwiperSlide>
             <div className="flex flex-col md:flex-row justify-center items-center">
               <img
                 src={yoga7}
@@ -374,11 +379,11 @@ export default function Specialities() {
                 {/* Content */}
                 <div>
                   <h3 className="text-[20px] font-heading sm:text-[22px] font-semibold text-[#1E1E1E] mb-3">
-                 Better Sleep Quality
+                    Better Sleep Quality
                   </h3>
 
                   <p className="text-[14px] font-body sm:text-[15px] text-[#4B4B4B] leading-[1.6]">
-                     Relaxation practices ease tension and quiet the mind before
+                    Relaxation practices ease tension and quiet the mind before
                     bedtime. Enjoy deeper, more restful sleep and wake up
                     feeling renewed.
                   </p>
@@ -386,7 +391,7 @@ export default function Specialities() {
               </div>
             </div>
           </SwiperSlide>
-          
+
         </Swiper>
       </div>
     </motion.section>

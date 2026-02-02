@@ -49,12 +49,12 @@ export default function YogaEventsSection() {
             EVENTS & RETREATS
           </p> */}
             <h2 className="text-3xl font-heading sm:text-4xl lg:text-5xl font-normal text-gray-900 sm:mb-4 mb-3 leading-tight">
-           Your Trusted Partner in 
+              Your Trusted Partner in
               <br className="sm:block hidden" />
               Holistic Wellness
             </h2>
             <p className="text-gray-600 font-body text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            With years of experience and a personalized approach, Ripal Shah offers yoga sessions designed to fit your lifestyle and goals. Whether you prefer practicing at home or in the studio, you receive expert guidance, dedicated attention, and real, lasting results.
+              With years of experience and a personalized approach, Ripal Shah offers yoga sessions designed to fit your lifestyle and goals. Whether you prefer practicing at home or in the studio, you receive expert guidance, dedicated attention, and real, lasting results.
             </p>
           </div>
 
@@ -127,7 +127,7 @@ export default function YogaEventsSection() {
                 Experienced & Certified Guidance
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-              With 7+ years of professional experience in yoga and Ayurveda, every session is safe, structured, and focused on correct techniques for maximum benefit.
+                With 7+ years of professional experience in yoga and Ayurveda, every session is safe, structured, and focused on correct techniques for maximum benefit.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ export default function YogaEventsSection() {
                 Personalized & Result-Oriented Approach
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-              No one-size-fits-all routines. Each practice is customized according to your body type, fitness level, and health goals to ensure steady and sustainable progress.
+                No one-size-fits-all routines. Each practice is customized according to your body type, fitness level, and health goals to ensure steady and sustainable progress.
               </p>
             </div>
 
@@ -292,7 +292,7 @@ export default function YogaEventsSection() {
                 Online & Offline Flexibility
               </h3>
               <p className="text-gray-600 font-body text-sm sm:text-base leading-relaxed">
-              Choose what suits you best — attend peaceful studio sessions or join live online classes from home, making yoga accessible anytime, anywhere. 
+                Choose what suits you best — attend peaceful studio sessions or join live online classes from home, making yoga accessible anytime, anywhere.
               </p>
             </div>
           </div>

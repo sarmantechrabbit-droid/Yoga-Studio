@@ -112,32 +112,29 @@ function FaqRow({ question, answer }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="faqs">
-      <div
-        className="border-b border-borderLight py-3 sm:py-5 cursor-pointer"
-        onClick={() => setOpen(!open)}
-      >
-        {/* Question Row */}
-        <div className="flex items-center justify-between">
-          <p className="font-heading text-[18px] sm:text-[19px] text-textPrimary">
-            {question}
-          </p>
+    <div className="border-b border-borderLight py-3 sm:py-5 cursor-pointer"
+      onClick={() => setOpen(!open)}
+    >
+      {/* Question Row */}
+      <div className="flex items-center justify-between">
+        <p className="font-heading text-[18px] sm:text-[19px] text-textPrimary">
+          {question}
+        </p>
 
-          <span className="text-[24px] font-light text-textPrimary">
-            {open ? "−" : "+"}
-          </span>
-        </div>
-
-        {/* Answer */}
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
-            }`}
-        >
-          <p className="text-[15px] text-gray-600 leading-relaxed pr-6">
-            {answer}
-          </p>
-        </div>
+        <span className="text-[24px] font-light text-textPrimary">
+          {open ? "−" : "+"}
+        </span>
       </div>
-    </section>
+
+      {/* Answer */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
+          }`}
+      >
+        <p className="text-[15px] text-gray-600 leading-relaxed pr-6">
+          {answer}
+        </p>
+      </div>
+    </div>
   );
 }

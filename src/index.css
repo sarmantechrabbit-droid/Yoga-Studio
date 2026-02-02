@@ -15,17 +15,17 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Reset SwiperSlide default styles */
+/* Specialist Swiper - Ensure slides don't shrink and handle responsive widths */
 .swiper-slide {
-  all: unset;
-  display: block;
+  flex-shrink: 0;
+  height: auto !important;
 }
 
-.swiper-slide {
-  width: auto !important;
-  height: auto !important;
-  flex-shrink: 0;
-  display: block;
+/* On desktop, allow slides to have auto width to remove trailing blank space */
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: auto !important;
+  }
 }
 
 html {
